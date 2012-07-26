@@ -1,0 +1,5 @@
+#wordlist-lookup-container {
+  position: absolute;
+  z-index: 1;
+  background: white;
+}
