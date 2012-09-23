@@ -5,7 +5,8 @@
     "flatiron": "*",
     "union": "*",
     "api-easy": "*",
-    "chai": "*"
+    "chai": "*",
+    "resourceful": "*"
   },
   "subdomain": "wordlist",
   "scripts": {
