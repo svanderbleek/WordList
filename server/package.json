@@ -3,11 +3,13 @@
   "version": "0.0.0-1",
   "dependencies": {
     "flatiron": "*",
-    "union": "*"
+    "union": "*",
+    "api-easy": "*",
+    "chai": "*"
   },
   "subdomain": "wordlist",
   "scripts": {
-    "start": "wordlist.js"
+    "test": "node_modules/api-easy/node_modules/vows/bin/vows test/*_test.js"
   },
   "engines": {
     "node": "0.8.x"
