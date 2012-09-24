@@ -1,9 +1,12 @@
 var flatiron = require('flatiron'),
   app = flatiron.app,
-  wordlist = require('./wordlist');
+  restful = require('./lib/restful'),
+  wordlist = require('./src/wordlist');
 
 app.use(flatiron.plugins.http);
+app.use(restful);
 
+/*
 app.router.get('/', function () {
   this.res.writeHead(200, {'Content-Type': 'application/json'});
   this.res.end();
@@ -28,5 +31,8 @@ app.router.put('/lists/:name', function(name) {
     self.res.end(JSON.stringify(result));
   });
 });
+*/
 
-app.start(8080);
+app.start(8080, function() {
+  console.log(app.router.routes);
+});

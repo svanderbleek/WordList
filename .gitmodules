@@ -1,0 +1,3 @@
+[submodule "server/lib/restful"]
+	path = server/lib/restful
+	url = https://github.com/flatiron/restful.git
