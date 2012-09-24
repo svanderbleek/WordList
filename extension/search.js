@@ -1,13 +1,7 @@
 (function () {
-  localStorage.words = localStorage.words || JSON.stringify({});
+  var definitionRequest, openContainer, closeContainer;
 
-  function storeWord(word) {
-    var words = JSON.parse(localStorage.words);
-    words[word] = definition;
-    localStorage.words = JSON.stringify(words);
-  }
-
-  function definitionRequest(word, url, callback) {
+  definitionRequest = function(word, url, callback) {
     var xhr = new XMLHttpRequest();
 
     xhr.onload = function() {
@@ -20,7 +14,7 @@
     xhr.send();
   }
 
-  var openContainer = function(selection) {
+  openContainer = function(selection) {
     var container, element; 
 
     element = selection.anchorNode.parentNode;
@@ -34,7 +28,7 @@
     return container;
   }
 
-  var closeContainer = function(container) {
+  closeContainer = function(container) {
     container.parentNode.removeChild(container);
     document.body.removeEventListener('click', closeContainer);
   }
@@ -53,4 +47,8 @@
       });
     });
   });
-).call(this);
+
+  this.WordList = this.WordList || {};
+  this.WordList.extension = this.WordList.extension || {};
+  this.WordList.extension.definitionRequest = definitionRequest;
+}).call(this);

@@ -6,17 +6,12 @@
 
   <link rel="shortcut icon" type="image/png" href="lib/jasmine-1.2.0/jasmine_favicon.png">
   <link rel="stylesheet" type="text/css" href="lib/jasmine-1.2.0/jasmine.css">
+</head>
+<body>
   <script type="text/javascript" src="lib/jasmine-1.2.0/jasmine.js"></script>
   <script type="text/javascript" src="lib/jasmine-1.2.0/jasmine-html.js"></script>
-
-  <!-- include source files here... -->
-  <script type="text/javascript" src="spec/SpecHelper.js"></script>
-  <script type="text/javascript" src="spec/PlayerSpec.js"></script>
-
-  <!-- include spec files here... -->
-  <script type="text/javascript" src="src/Player.js"></script>
-  <script type="text/javascript" src="src/Song.js"></script>
-
+  <script type="text/javascript" src="../search.js"></script>
+  <script type="text/javascript" src="spec/search_spec.js"></script>
   <script type="text/javascript">
     (function() {
       var jasmineEnv = jasmine.getEnv();
@@ -45,9 +40,5 @@
 
     })();
   </script>
-
-</head>
-
-<body>
 </body>
 </html>
