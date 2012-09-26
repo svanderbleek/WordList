@@ -6,7 +6,6 @@
 
     xhr.onload = function() {
       var definition = xhr.response.querySelector(".quick_def").innerHTML;
-      callback(definition);
     }
     xhr.responseType = "document";
 
@@ -39,7 +38,7 @@
     selection = window.getSelection();
     word = selected.toString();
 
-    definition = definitionRequest(word, "http://www.spanishdict.com/translate/", function() {
+    definition = definitionRequest(word, "bing-api-goes-here", function() {
       container = createContainer(selection);
       container.innerHTML = definition;
       document.body.addEventListener('click', function() {
