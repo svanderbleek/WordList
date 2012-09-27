@@ -1,17 +1,7 @@
 (function () {
-  var definitionRequest, openContainer, closeContainer;
+  var translator, openContainer, closeContainer;
 
-  definitionRequest = function(word, url, callback) {
-    var xhr = new XMLHttpRequest();
-
-    xhr.onload = function() {
-      var definition = xhr.response.querySelector(".quick_def").innerHTML;
-    }
-    xhr.responseType = "document";
-
-    xhr.open("GET", url + word, true);
-    xhr.send();
-  }
+  translator = new BingTranslator("wordlist", "aflrWqFARUNUvsRTreGAsNfSON/gnrIP7Nm8iflAJKY=");
 
   openContainer = function(selection) {
     var container, element; 
